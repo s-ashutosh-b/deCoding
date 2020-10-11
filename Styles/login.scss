@@ -107,6 +107,7 @@ main {
       transition: all 0.25s;
       border-radius: 5px;
       font-size: 1.25rem;
+      outline: none;
       &:hover, &:focus{
         background: white;
         border-color: $primary-tone;

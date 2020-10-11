@@ -58,6 +58,7 @@ main {
       text-decoration: none;
       color: white;
       border-bottom: 2px solid transparent;
+      white-space: nowrap;
       transition: all 0.25s;
       &:hover {
         border-bottom: 2px solid white;
