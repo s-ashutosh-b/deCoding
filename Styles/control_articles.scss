@@ -1,0 +1,137 @@
+$primary-tone: rgb(48, 115, 146);
+$secondary-tone: rgb(28, 87, 114);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+  height: 100vh;
+}
+header {
+  height: 3.5rem;
+  background: $primary-tone;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  margin-bottom: -3.5rem;
+  span.title {
+    text-decoration: underline;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  input[type="button"] {
+    padding: 0.5rem 1rem;
+    background: $primary-tone;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    transition: all 0.25s;
+    &:hover {
+      background: white;
+      border: 2px solid transparent;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  padding-top: 3.5rem;
+  aside {
+    display: flex;
+    padding-top: 1rem;
+    flex-direction: column;
+    background: $secondary-tone;
+    height: 100%;
+    width: fit-content;
+    a {
+      padding: 0.25rem 1rem;
+      margin: 0.25rem 0 0.25rem 0.25rem;
+      text-decoration: none;
+      color: white;
+      border-bottom: 2px solid transparent;
+      transition: all 0.25s;
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+    a.active {
+      background: white;
+      color: $secondary-tone;
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+  div.control-area {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    span.heading {
+      font-size: 1.5rem;
+    }
+    table{
+      width: 100%;
+      thead{
+        display: block;
+        tr{
+          th{
+            text-align: left;
+            padding: 0.25rem;
+            font-size: 1rem;
+            font-weight: 500;
+          }
+          th:nth-child(1){
+            width: 5rem;
+          }
+          th:nth-child(2){
+            width: 80%;
+          }
+          th:nth-child(3){
+            width: fit-content;
+          }
+          th:nth-child(4){
+            width: fit-content;
+          }
+          th:nth-child(5){
+            width: fit-content;
+          }
+        }
+      }
+      tbody{
+        height: 60vh;
+        display: block;
+        overflow-y: scroll;
+        tr{
+          td:nth-child(1){
+            width: 5rem;
+          }
+          td:nth-child(2){
+            width: 80%;
+          }
+          td:nth-child(3){
+            width: fit-content;
+          }
+          td:nth-child(4){
+            width: fit-content;
+          }
+          td:nth-child(5){
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+}

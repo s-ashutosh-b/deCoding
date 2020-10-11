@@ -1,0 +1,244 @@
+$primary-tone: rgb(48, 115, 146);
+$secondary-tone: rgb(115, 48, 146);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: fit-content;
+  width: 100%;
+  overflow-x: hidden;
+  //  &::-webkit-scrollbar{
+  //    width: 0px;
+  //  }
+}
+h1 {
+  font-size: 2.15rem;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+header {
+  background: $primary-tone;
+  color: white;
+  height: 3.5rem;
+  padding: 0.5rem 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  svg {
+    fill: white;
+    height: 1.75rem;
+    width: auto;
+    margin: 0 1rem 5px;
+    cursor: pointer;
+  }
+  span.title {
+    margin: auto;
+    font-size: 2.15rem;
+  }
+}
+nav {
+  background: $primary-tone;
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    padding: 0 1rem;
+    text-decoration: none;
+    color: rgba($color: #ffffff, $alpha: 0.8);
+    transition: all 0.25s;
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
+      font-size: 1.15rem;
+    }
+  }
+}
+
+main {
+  padding: 5%;
+  position: relative;
+  display: flex;
+  aside.timeline {
+    order: 1;
+    height: 100%;
+    width: 20%;
+    position: sticky;
+    top: 1rem;
+    padding: 1rem;
+    padding-left: 0;
+    left: 0;
+    a {
+      display: block;
+      margin: 0.5rem;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  aside.latest-blogs {
+    order: 3;
+    height: 100%;
+    width: 20%;
+    position: sticky;
+    top: 1rem;
+    padding: 1rem;
+    padding-right: 0;
+    right: 0;
+    a {
+      display: block;
+      margin: 0.5rem;
+      margin-left: 1rem;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  div.blogs-area {
+    order: 2;
+    width: 60%;
+    padding: 1rem;
+    section.blog {
+      height: auto;
+      margin: 0 0 2rem;
+      h1 {
+        margin-bottom: 0.75rem;
+      }
+      h3 {
+        margin-bottom: 0.5rem;
+        font-weight: 300;
+      }
+      div.article-author {
+        display: flex;
+        padding: 1rem;
+        img {
+          height: 48px;
+          width: 48px;
+          border: 1px solid grey;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        span.authors-data {
+          margin-left: 1rem;
+          flex-direction: column;
+          span.authors-name {
+            display: block;
+            font-size: 1.05rem;
+            &:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+          span.authors-subtitle {
+            display: block;
+            font-size: 0.9rem;
+            &:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+        &:hover {
+          background: rgba($color: #000000, $alpha: 0.015);
+        }
+      }
+      article.article-content{
+        img{
+          margin: 1rem;
+          border-radius: 5px;
+          height: auto;
+          width: 45vw;
+        }
+      }
+      div.article-navigation{
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        a.next-article {
+          box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.5);
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+          color: black;
+          text-decoration: none;
+          margin: 0.5rem;
+          transition: all 0.25s;
+          &:hover {
+            background: $primary-tone;
+            color: white;
+          }
+        }
+        a.prev-article {
+          box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.5);
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+          color: black;
+          text-decoration: none;
+          margin: 0.5rem;
+          transition: all 0.25s;
+          &:hover {
+            background: $primary-tone;
+            color: white;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+footer {
+  height: fit-content;
+  width: 100%;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-evenly;
+  background: #000000;
+  section.site-map {
+    margin: 1rem;
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  section.blogs {
+    margin: 1rem;
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  section.social-media {
+    margin: 1rem;
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+$primary-tone: rgb(48, 115, 146);
+$secondary-tone: rgb(115, 48, 146);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  min-height: 480px;
+}
+header {
+  height: 3.5rem;
+  background: $primary-tone;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  span.title {
+    text-decoration: underline;
+    color: white;
+    font-size: 2.15rem;
+  }
+}
+main {
+  height: 100%;
+  margin: -3.5rem auto -2rem;
+  padding: 3.5rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba($color: #000000, $alpha: 0.5);
+    padding: 2rem;
+    border-radius: 5px;
+    span.heading {
+      font-size: 2rem;
+      text-align: center;
+      text-decoration: underline;
+      margin: 1rem;
+    }
+    div.form-field {
+      position: relative;
+      width: 280px;
+      height: 50px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      input {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding-top: 20px;
+        border: none;
+        outline: none;
+        &:focus + label, &:valid + label {
+          border-bottom-color: transparent;
+          &::after{
+            transform: translateX(0);
+          }
+          span {
+            color: #5fa8d3;
+            transform: translateY(-115%);
+          }
+        }
+      }
+      label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid black;
+        border-radius: 4px;
+        transition: all 0.25s;
+        span {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transition: all 0.25s;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          border-radius: 3px;
+          height: 100%;
+          width: 100%;
+          pointer-events: none;
+          border-bottom: 3px solid #5fa8d3;
+          transform: translateX(-100%);
+          transition: all 0.25s;
+        }
+      }
+    }
+    input[type=button]{
+      padding: 0.5rem;
+      background: $primary-tone;
+      color: white;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.25s;
+      border-radius: 5px;
+      font-size: 1.25rem;
+      &:hover, &:focus{
+        background: white;
+        border-color: $primary-tone;
+        color: $primary-tone;
+      }
+    }
+  }
+}
+footer {
+  display: fixed;
+  bottom: 0;
+  left: 0;
+  height: 2rem;
+  background: $primary-tone;
+}
