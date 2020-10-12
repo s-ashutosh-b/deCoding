@@ -38,7 +38,7 @@ header {
     width: auto;
     margin: 0 1rem 5px;
     cursor: pointer;
-    &:last-child{
+    &:last-child {
       display: none;
     }
   }
@@ -72,50 +72,32 @@ main {
   padding: 5%;
   position: relative;
   display: flex;
-  aside.timeline {
-    order: 1;
+  aside.quick-info {
     height: 100%;
     width: 20%;
     position: sticky;
-    top: 1rem;
+    top: 3.5rem;
     padding: 1rem;
     padding-left: 0;
     left: 0;
-    a {
-      display: block;
-      margin: 0.5rem;
-      margin-left: 1rem;
-      font-size: 0.95rem;
-      text-decoration: none;
-      color: black;
-      &:hover {
-        text-decoration: underline;
-      }
+    img {
+      height: 12rem;
+      width: 12rem;
+      border-radius: 50%;
+      margin-bottom: 2rem;
     }
-  }
-  aside.latest-blogs {
-    order: 3;
-    height: 100%;
-    width: 20%;
-    position: sticky;
-    top: 1rem;
-    padding: 1rem;
-    padding-right: 0;
-    right: 0;
-    a {
-      display: block;
-      margin: 0.5rem;
-      margin-left: 1rem;
-      text-decoration: none;
-      color: black;
-      &:hover {
-        text-decoration: underline;
+    span {
+      font-size: 0.85rem;
+      margin-left: 1.5rem;
+      margin-bottom: 0.25rem;
+      &:nth-child(2) {
+        font-size: 1.25rem;
+        font-weight: 400;
       }
     }
   }
   div.blogs-area {
-    order: 2;
-    width: 60%;
+    width: 70%;
     padding: 1rem;
     section.blog {
       height: auto;
@@ -161,45 +143,14 @@ main {
           background: rgba($color: #000000, $alpha: 0.015);
         }
       }
-      article.article-content{
-        img{
-          margin: 1rem;
-          border-radius: 5px;
-          height: auto;
-          width: 45vw;
+      a.read-full-article {
+        font-size: 0.9rem;
+        color: black;
+        text-decoration: none;
+        margin-left: 1rem;
+        &:hover {
+          text-decoration: underline;
         }
-      }
-      div.article-navigation{
-        padding: 1rem;
-        display: flex;
-        justify-content: flex-end;
-        a.next-article {
-          box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.5);
-          padding: 0.5rem 1rem;
-          font-size: 0.9rem;
-          color: black;
-          text-decoration: none;
-          margin: 0.5rem;
-          transition: all 0.25s;
-          &:hover {
-            background: $primary-tone;
-            color: white;
-          }
-        }
-        a.prev-article {
-          box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.5);
-          padding: 0.5rem 1rem;
-          font-size: 0.9rem;
-          color: black;
-          text-decoration: none;
-          margin: 0.5rem;
-          transition: all 0.25s;
-          &:hover {
-            background: $primary-tone;
-            color: white;
-          }
-        }
-
       }
     }
   }
@@ -244,5 +195,51 @@ footer {
         text-decoration: underline;
       }
     }
+  }
+}
+@media only screen and (max-width: 720px){
+  header {
+    span.title {
+      flex: 1;
+    }
+    svg {
+      display: none;
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    background: rgba($color: #ffffff, $alpha: 0.95);
+    top: 3.5rem;
+    right: 0;
+    height: fit-content;
+    width: 100%;
+    padding: 1rem;
+    z-index: 10;
+    a {
+      margin: 0.25rem auto;
+      width: 100%;
+    }
+  }
+
+  main{
+    flex-direction: column;
+    aside.quick-info{
+      position: relative; 
+      top: 0;
+      width: 100%;
+      span{
+        display: block;
+      }
+    }
+    div.blogs-area{
+      width: 100%;
+    }
+  }
+  footer{
+    flex-direction: column;
   }
 }
