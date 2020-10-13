@@ -8,20 +8,21 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../Styles/CSS/article.css">
+  <script src="../Scripts/article.js"></script>
   <title>deCoding</title>
 
 </head>
 
 <body>
   <header>
+    <span onclick="window.location.href = '../index.html'" class="title"><u>deCoding</u></span>
     <svg class="search-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M19.2231 0C29.8397 0 38.4462 8.41638 38.4462 18.7985C38.4462 23.6981 36.5294 28.1599 33.3892 31.5059L39.565 37.5272C40.1439 38.0919 40.1451 39.0085 39.5677 39.5746C39.0428 40.0893 38.2205 40.1371 37.6403 39.7173L37.4741 39.5773L31.2254 33.4835C27.9363 36.0577 23.7635 37.597 19.2231 37.597C8.60647 37.597 0 29.1807 0 18.7985C0 8.41638 8.60647 0 19.2231 0ZM19.2231 2.89548C10.2417 2.89548 2.96087 10.0155 2.96087 18.7985C2.96087 27.5815 10.2417 34.7016 19.2231 34.7016C28.2045 34.7016 35.4853 27.5815 35.4853 18.7985C35.4853 10.0155 28.2045 2.89548 19.2231 2.89548Z" />
     </svg>
-    <span onclick="window.location.href = '../index.html'" class="title"><u>deCoding</u></span>
-    <svg class="account-button" width="34" height="40" viewBox="0 0 34 40" fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+    <svg class="account-button" onclick="window.location.href = './login.html'" width="34" height="40"
+      viewBox="0 0 34 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M16.8123 26.3479C25.9301 26.3479 33.6246 27.7579 33.6246 33.1979C33.6246 38.64 25.8797 40 16.8123 40C7.69662 40 0 38.59 0 33.1499C0 27.7079 7.74498 26.3479 16.8123 26.3479ZM16.8123 0C22.989 0 27.9378 4.70805 27.9378 10.5821C27.9378 16.4562 22.989 21.1662 16.8123 21.1662C10.6378 21.1662 5.6868 16.4562 5.6868 10.5821C5.6868 4.70805 10.6378 0 16.8123 0Z" />
     </svg>
@@ -43,7 +44,7 @@
 
   <main>
     <aside class="timeline">
-      <span class="timeline-title">Timeline</span>
+      <span class="timeline-title"><span class="text">Timeline</span><span class="mark">&#x25BC;</span></span>
       <a href="#">September 2020</a>
       <a href="#">August 2020</a>
       <a href="#">July 2020</a>
@@ -52,12 +53,12 @@
       <a href="#">Show more...</a>
     </aside>
     <aside class="latest-blogs">
-      <span class="timeline-title">Previous Blogs</span>
-      <a href="#">Previous blogs title should come here</a>
-      <a href="#">Previous blogs title should come here</a>
-      <a href="#">Previous blogs title should come here</a>
-      <a href="#">Previous blogs title should come here</a>
-      <a href="#">Previous blogs title should come here</a>
+      <span class="blog-title"><span class="text">Previous Blogs</span><span class="mark">&#x25BC;</span></span>
+      <a href="./article.html">Previous blogs title should come here</a>
+      <a href="./article.html">Previous blogs title should come here</a>
+      <a href="./article.html">Previous blogs title should come here</a>
+      <a href="./article.html">Previous blogs title should come here</a>
+      <a href="./article.html">Previous blogs title should come here</a>
     </aside>
     <div class="blogs-area">
       <section class="blog">
@@ -80,7 +81,13 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
               anim id est laborum.
             </p>
-            <img src="./Images/pexels-roberto-nickson-2559941.jpg" alt="">
+            <picture>
+              <source media="(min-width:2160px)" srcset="../Images/4k/pexels-roberto-nickson-2559941.jpg">
+              <source media="(min-width:1080px)" srcset="../Images/1080p/pexels-roberto-nickson-2559941.jpg">
+              <source media="(min-width:720px)" srcset="../Images/720p/pexels-roberto-nickson-2559941.jpg">
+              <source media="(min-width:480px)" srcset="../Images/480p/pexels-roberto-nickson-2559941.jpg">
+              <img src="../Images/360/pexels-roberto-nickson-2559941.jpg" alt="roberto-nickson-2559941">
+            </picture>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -99,8 +106,8 @@
             </p>
           </article>
           <div class="article-navigation">
-            <a class="prev-article" href="#">Previous Article</a>
-            <a class="next-article" href="#">Next article</a>
+            <a class="prev-article" href="./article.html">Previous Article</a>
+            <a class="next-article" href="./article.html">Next article</a>
           </div>
       </section>
     </div>

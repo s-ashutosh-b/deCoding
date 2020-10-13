@@ -14,13 +14,13 @@
 
 <body>
   <header>
+    <span class="title"><u>deCoding</u></span>
     <svg class="search-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M19.2231 0C29.8397 0 38.4462 8.41638 38.4462 18.7985C38.4462 23.6981 36.5294 28.1599 33.3892 31.5059L39.565 37.5272C40.1439 38.0919 40.1451 39.0085 39.5677 39.5746C39.0428 40.0893 38.2205 40.1371 37.6403 39.7173L37.4741 39.5773L31.2254 33.4835C27.9363 36.0577 23.7635 37.597 19.2231 37.597C8.60647 37.597 0 29.1807 0 18.7985C0 8.41638 8.60647 0 19.2231 0ZM19.2231 2.89548C10.2417 2.89548 2.96087 10.0155 2.96087 18.7985C2.96087 27.5815 10.2417 34.7016 19.2231 34.7016C28.2045 34.7016 35.4853 27.5815 35.4853 18.7985C35.4853 10.0155 28.2045 2.89548 19.2231 2.89548Z"
         fill="#200E32" />
     </svg>
-    <span class="title"><u>deCoding</u></span>
     <svg onclick="window.location.href = './Pages/login.html'" class="account-button" width="34" height="40"
       viewBox="0 0 34 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -46,28 +46,52 @@
 
   <div class="carousal">
     <div class="carousal-slide">
-      <img src="./Images/pexels-matt-hardy-3560168.jpg" alt="matt-hardy-3560168">
+      <picture>
+        <source media="(min-width:2160px)" srcset="./Images/4k/pexels-matt-hardy-3560168.jpg">
+        <source media="(min-width:1080px)" srcset="./Images/1080p/pexels-matt-hardy-3560168.jpg">
+        <source media="(min-width:720px)" srcset="./Images/720p/pexels-matt-hardy-3560168.jpg">
+        <source media="(min-width:480px)" srcset="./Images/480p/pexels-matt-hardy-3560168.jpg">
+        <img src="./Images/360p/pexels-matt-hardy-3560168.jpg" alt="matt-hardy-3560168">
+      </picture>
       <span>
         <h1>Image Carousal Title</h1>
         <h3>Image carousal subtitle. Probably Lorem Ipsum Dolar Sit Amet!</h3>
       </span>
     </div>
     <div class="carousal-slide">
-      <img src="./Images/pexels-riccardo-bertolo-4245826.jpg" alt="riccardo-bertolo-4245826">
+      <picture>
+        <source media="(min-width:2160px)" srcset="./Images/4k/pexels-riccardo-bertolo-4245826.jpg">
+        <source media="(min-width:1080px)" srcset="./Images/1080p/pexels-riccardo-bertolo-4245826.jpg">
+        <source media="(min-width:720px)" srcset="./Images/720p/pexels-riccardo-bertolo-4245826.jpg">
+        <source media="(min-width:480px)" srcset="./Images/480p/pexels-riccardo-bertolo-4245826.jpg">
+        <img src="./Images/360p/pexels-riccardo-bertolo-4245826.jpg" alt="riccardo-bertolo-4245826.jpg">
+      </picture>
       <span>
         <h1>Image Carousal Title</h1>
         <h3>Image carousal subtitle. Probably Lorem Ipsum Dolar Sit Amet!</h3>
       </span>
     </div>
     <div class="carousal-slide">
-      <img src="./Images/pexels-roberto-nickson-2559941.jpg" alt="roberto-nickson-2559941">
+      <picture>
+        <source media="(min-width:2160px)" srcset="./Images/4k/pexels-roberto-nickson-2559941.jpg">
+        <source media="(min-width:1080px)" srcset="./Images/1080p/pexels-roberto-nickson-2559941.jpg">
+        <source media="(min-width:720px)" srcset="./Images/720p/pexels-roberto-nickson-2559941.jpg">
+        <source media="(min-width:480px)" srcset="./Images/480p/pexels-roberto-nickson-2559941.jpg">
+        <img src="./Images/360/pexels-roberto-nickson-2559941.jpg" alt="roberto-nickson-2559941">
+      </picture>
       <span>
         <h1>Image Carousal Title</h1>
         <h3>Image carousal subtitle. Probably Lorem Ipsum Dolar Sit Amet!</h3>
       </span>
     </div>
     <div class="carousal-slide">
-      <img src="./Images/pexels-simon-matzinger-1323550.jpg" alt="simon-matzinger-1323550">
+      <picture>
+        <source media="(min-width:2160px)" srcset="./Images/4k/pexels-simon-matzinger-1323550.jpg">
+        <source media="(min-width:1080px)" srcset="./Images/1080p/pexels-simon-matzinger-1323550.jpg">
+        <source media="(min-width:720px)" srcset="./Images/720p/pexels-simon-matzinger-1323550.jpg">
+        <source media="(min-width:480px)" srcset="./Images/480p/pexels-simon-matzinger-1323550.jpg">
+        <img src="./Images/360p/pexels-simon-matzinger-1323550.jpg" alt="simon-matzinger-1323550">
+      </picture>
       <span>
         <h1>Image Carousal Title</h1>
         <h3>Image carousal subtitle. Probably Lorem Ipsum Dolar Sit Amet!</h3>
@@ -80,7 +104,7 @@
 
   <main>
     <aside class="timeline">
-      <span class="timeline-title">Timeline</span>
+      <span class="timeline-title"><span class="text">Timeline</span><span class="mark">&#x25BC;</span></span>
       <a href="#">September 2020</a>
       <a href="#">August 2020</a>
       <a href="#">July 2020</a>
@@ -89,12 +113,12 @@
       <a href="#">Show more...</a>
     </aside>
     <aside class="latest-blogs">
-      <span class="timeline-title">Previous Blogs</span>
-      <a href="#">Previous blogs title should come here</a>
-      <a href="#">Previous blogs title should come here</a>
-      <a href="#">Previous blogs title should come here</a>
-      <a href="#">Previous blogs title should come here</a>
-      <a href="#">Previous blogs title should come here</a>
+      <span class="blog-title"><span class="text">Previous Blogs</span><span class="mark">&#x25BC;</span></span>
+      <a href="./Pages/article.html">Previous blogs title should come here</a>
+      <a href="./Pages/article.html">Previous blogs title should come here</a>
+      <a href="./Pages/article.html">Previous blogs title should come here</a>
+      <a href="./Pages/article.html">Previous blogs title should come here</a>
+      <a href="./Pages/article.html">Previous blogs title should come here</a>
     </aside>
     <div class="blogs-area">
       <section class="blog">

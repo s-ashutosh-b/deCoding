@@ -1,4 +1,0 @@
-# deCoding:
-
-A Blog Project.
-
