@@ -76,99 +76,101 @@ main {
     height: 100%;
     width: 100%;
     padding: 1rem;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     justify-items: center;
     span.heading {
       font-size: 1.5rem;
     }
-    table {
-      display: flex;
-      flex-direction: column;
-      max-height: 60vh;
-      width: fit-content;
-      border-collapse: collapse;
-      thead {
-        display: block;
-        background: rgba($color: #2e0158, $alpha: 1);
-        color: white;
-        border-bottom: 3px solid rgba($color: #71afd8, $alpha: 1);
-        border-radius: 5px 5px 0 0;
-        tr {
-          th {
-            text-align: left;
-            padding: 0.25rem;
-            font-size: 1rem;
-            font-weight: 500;
-            &:not(:last-child) {
-              border-right: 1px solid rgba($color: #71afd8, $alpha: 0.8);
+    div {
+      max-width: 100%;
+      table {
+        display: flex;
+        flex-direction: column;
+        max-height: 60vh;
+        width: fit-content;
+        border-collapse: collapse;
+        thead {
+          display: block;
+          background: rgba($color: #2e0158, $alpha: 1);
+          color: white;
+          border-bottom: 3px solid rgba($color: #71afd8, $alpha: 1);
+          border-radius: 5px 5px 0 0;
+          tr {
+            th {
+              text-align: left;
+              padding: 0.25rem;
+              font-size: 1rem;
+              font-weight: 500;
+              &:not(:last-child) {
+                border-right: 1px solid rgba($color: #71afd8, $alpha: 0.8);
+              }
             }
-          }
-          th:nth-child(1) {
-            text-align: center;
-            min-width: 4rem;
-          }
-          th:nth-child(2) {
-            min-width: 21rem;
-            width: 42rem;
-            
-          }
-          th:nth-child(3) {
-            min-width: 7rem;
-            width: 12rem;
-          }
-          th:nth-child(4) {
-            min-width: 7rem;
-          }
-          th:nth-child(5) {
-            min-width: 3rem;
+            th:nth-child(1) {
+              text-align: center;
+              min-width: 4rem;
+            }
+            th:nth-child(2) {
+              min-width: 21rem;
+              width: 42rem;
+            }
+            th:nth-child(3) {
+              min-width: 7rem;
+              width: 12rem;
+            }
+            th:nth-child(4) {
+              min-width: 7rem;
+            }
+            th:nth-child(5) {
+              min-width: 3rem;
+            }
           }
         }
-      }
-      tbody {
-        max-height: 100%;
-        display: block;
-        overflow-y: scroll;
-        text-align: left;
-        padding: 0.25rem;
-        font-size: 0.85rem;
-        border-bottom: 3px solid rgba($color: #71afd8, $alpha: 1);
-        border-radius: 0 0 5px 5px;
+        tbody {
+          max-height: 100%;
+          display: block;
+          overflow-y: scroll;
+          text-align: left;
+          padding: 0.25rem;
+          font-size: 0.85rem;
+          border-bottom: 3px solid rgba($color: #71afd8, $alpha: 1);
+          border-radius: 0 0 5px 5px;
 
-        tr {
-          &:hover {
-            background: rgba($color: #2e0158, $alpha: 0.1);
-          }
-          td {
-            padding: 0.25rem;
-            border-bottom: 2px solid transparent;
-
+          tr {
             &:hover {
-              border-bottom: 2px solid rgba($color: #71afd8, $alpha: 1);
+              background: rgba($color: #2e0158, $alpha: 0.1);
             }
-          }
-          td:nth-child(1) {
-            min-width: 4rem;
-            text-align: center;
-          }
-          td:nth-child(2) {
-            min-width: 21rem;
-            width: 42rem;
-          }
-          td:nth-child(3) {
-            
-            min-width: 7rem;
-            width: 12rem;
-          }
-          td:nth-child(4) {
-            min-width: 7rem;
-          }
-          td:nth-child(5) {
-            min-width: 3rem;
-            text-align: center;
-            cursor: pointer;
-            &:hover {
-              border-bottom-color: red;
+            td {
+              padding: 0.25rem;
+              border-bottom: 2px solid transparent;
+
+              &:hover {
+                border-bottom: 2px solid rgba($color: #71afd8, $alpha: 1);
+              }
+            }
+            td:nth-child(1) {
+              min-width: 4rem;
+              text-align: center;
+            }
+            td:nth-child(2) {
+              min-width: 21rem;
+              width: 42rem;
+            }
+            td:nth-child(3) {
+              min-width: 7rem;
+              width: 12rem;
+            }
+            td:nth-child(4) {
+              min-width: 7rem;
+            }
+            td:nth-child(5) {
+              min-width: 3rem;
+              text-align: center;
+              cursor: pointer;
+              &:hover {
+                border-bottom-color: red;
+              }
             }
           }
         }

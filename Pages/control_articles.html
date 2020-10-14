@@ -18,6 +18,7 @@
   </header>
   <main>
     <aside class="navigation">
+      <a href="#" class="newArticle">New Article</a>
       <a href="./control_articles.html" class="control_navigation active">Articles</a>
       <a href="./control_authors.html" class="control_navigation">Authors</a>
       <a href="./control_categories.html" class="control_navigation">Categories</a>
@@ -75,6 +76,12 @@
       let doc = document.getElementById(row_id)
       doc.remove()
     }
+    (() => {
+      const aside = document.querySelector(`aside`)
+      aside.addEventListener(`wheel`, (e) => {
+        aside.scrollLeft += e.deltaY
+      })
+    })()
   </script>
 </body>
 

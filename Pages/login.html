@@ -28,8 +28,47 @@
       </div>
       <input type="button" value="Login" onclick="window.location.href = './dashboard.html'">
     </form>
+    <form action="">
+      <span class="heading">Sign up</span>
+      <div class="form-field">
+        <input type="text" autocomplete="off" required id="username">
+        <label for="username"><span>Username</span></label>
+      </div>
+      <span class="username_existed" style="display: none;">Username already exist :(</span>
+      <div class="form-field">
+        <input type="password" autocomplete="off" required id="password">
+        <label for="password"><span>Password</span></label>
+      </div>
+      <input type="button" value="Signup" onclick="window.location.href = './dashboard.html'">
+    </form>
+    <div class="footer"></div>
   </main>
-  <footer></footer>
+  <script>
+    (()=>{
+      let header = document.querySelector(`header`)
+  let scroll_prev = 0
+  let scroll_new = 0
+  let header_sticky = false
+
+  addEventListener(`scroll`, (e) => {
+    scroll_prev = scroll_new
+    scroll_new = e.path[1].window.scrollY
+
+    scroll_prev > scroll_new ? (!header_sticky ? showHeader() : null) : (header_sticky ? hideHeader() : null)
+    if (scroll_new == 0) {
+      header.removeAttribute(`style`)
+    }
+  })
+  function showHeader() {
+    header_sticky = true
+    header.style = `position: sticky; top: 0; box-shadow: 0 4px 4px rgba(0,0,0,0.25);`
+  }
+  function hideHeader() {
+    header_sticky = false
+    header.removeAttribute(`style`)
+  }
+    })()
+  </script>
 </body>
 
 </html>

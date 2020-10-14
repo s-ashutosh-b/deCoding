@@ -77,12 +77,14 @@ main {
     width: 100%;
     padding: 1rem;
     justify-content: center;
+    overflow: hidden;
     align-items: center;
     justify-items: center;
     span.heading {
       font-size: 1.5rem;
     }
-
+    div{
+      max-width: 100%;
     table {
       display: flex;
       flex-direction: column;
@@ -173,6 +175,7 @@ main {
         }
       }
     }
+  }
   }
 }
 @media only screen and (max-width: 720px) {

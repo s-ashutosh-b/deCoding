@@ -10,6 +10,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="../Styles/CSS/control_analytics.css">
 </head>
+
 <body>
   <header>
     <span class="title" onclick="window.location.href = './dashboard.html'">Admin's Dashboard</span>
@@ -17,6 +18,7 @@
   </header>
   <main>
     <aside class="navigation">
+      <a href="#" class="newArticle">New Article</a>
       <a href="./control_articles.html" class="control_navigation">Articles</a>
       <a href="./control_authors.html" class="control_navigation">Authors</a>
       <a href="./control_categories.html" class="control_navigation">Categories</a>
@@ -26,10 +28,19 @@
     <div class="control-area">
       <span class="heading">Analytiics:</span>
       <table>
-        
+
       </table>
     </div>
   </main>
   <footer></footer>
+  <script>
+    (() => {
+      const aside = document.querySelector(`aside`)
+      aside.addEventListener(`wheel`, (e) => {
+        aside.scrollLeft += e.deltaY
+      })
+    })()
+  </script>
 </body>
+
 </html>
