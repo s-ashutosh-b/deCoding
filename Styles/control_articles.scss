@@ -85,7 +85,7 @@ main {
     table {
       display: flex;
       flex-direction: column;
-      height: 90%;
+      max-height: 60vh;
       width: fit-content;
       border-collapse: collapse;
       thead {
@@ -106,19 +106,22 @@ main {
           }
           th:nth-child(1) {
             text-align: center;
-            width: 4rem;
+            min-width: 4rem;
           }
           th:nth-child(2) {
+            min-width: 21rem;
             width: 42rem;
+            
           }
           th:nth-child(3) {
+            min-width: 7rem;
             width: 12rem;
           }
           th:nth-child(4) {
-            width: 7rem;
+            min-width: 7rem;
           }
           th:nth-child(5) {
-            width: 3rem;
+            min-width: 3rem;
           }
         }
       }
@@ -131,6 +134,7 @@ main {
         font-size: 0.85rem;
         border-bottom: 3px solid rgba($color: #71afd8, $alpha: 1);
         border-radius: 0 0 5px 5px;
+
         tr {
           &:hover {
             background: rgba($color: #2e0158, $alpha: 0.1);
@@ -144,21 +148,23 @@ main {
             }
           }
           td:nth-child(1) {
-            width: 4rem;
-
+            min-width: 4rem;
             text-align: center;
           }
           td:nth-child(2) {
+            min-width: 21rem;
             width: 42rem;
           }
           td:nth-child(3) {
+            
+            min-width: 7rem;
             width: 12rem;
           }
           td:nth-child(4) {
-            width: 7rem;
+            min-width: 7rem;
           }
           td:nth-child(5) {
-            width: 3rem;
+            min-width: 3rem;
             text-align: center;
             cursor: pointer;
             &:hover {
@@ -171,16 +177,25 @@ main {
   }
 }
 @media only screen and (max-width: 720px) {
+  header {
+    span.title {
+      font-size: 1.25rem;
+    }
+    input[type="button"] {
+      padding: 0.25rem 0.5rem;
+    }
+  }
   main {
     flex-direction: column;
     overflow: hidden;
     aside {
       flex-direction: row;
       height: fit-content;
-      position: relative;
-      padding: 00.25rem;
-      overflow: scroll;
       width: 100%;
+      position: relative;
+      padding: 0.25rem;
+      overflow: scroll;
+      padding-bottom: 0;
       &::-webkit-scrollbar {
         display: none;
       }

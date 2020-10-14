@@ -21,7 +21,7 @@ header {
   span.title {
     text-decoration: underline;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     cursor: pointer;
   }
   input[type="button"] {
@@ -83,16 +83,25 @@ main {
   }
 }
 @media only screen and (max-width: 720px) {
+  header {
+    span.title {
+      font-size: 1.25rem;
+    }
+    input[type="button"] {
+      padding: 0.25rem 0.5rem;
+    }
+  }
   main {
     flex-direction: column;
     overflow: hidden;
     aside {
       flex-direction: row;
       height: fit-content;
+      width: 100%;
       position: relative;
       padding: 0.25rem;
       overflow: scroll;
-      width: 100%;
+      padding-bottom: 0;
       &::-webkit-scrollbar {
         display: none;
       }
