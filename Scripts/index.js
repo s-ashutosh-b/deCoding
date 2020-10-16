@@ -176,14 +176,13 @@ const carousal_animation = () => {
   //? how to debounce?
   const automate = (interval) => {
     setInterval(() => {
-      console.log(repeatTime)
       Slide_calculator(ACTIVE_SLIDE, true)
       Previous_slide(PREVIOUS_SLIDE)
       Active_slide(ACTIVE_SLIDE)
       Next_slide(NEXT_SLIDE)
       Rearrange_slides(PREVIOUS_SLIDE, ACTIVE_SLIDE, NEXT_SLIDE)
     }, interval);
-  } 
+  }
   automate(repeatTime)
 
   // Next button events
@@ -233,4 +232,33 @@ const carousal_animation = () => {
       }
     })
   }
+
+  // Carousal touch event
+  let touch_start_cord_x
+  let touch_end_cord_x
+  CAROUSAL_SLIDES.forEach(slide => {
+    slide.addEventListener(`touchstart`, (e) => {
+      touch_start_cord_x = e.touches[0].clientX
+    })
+    slide.addEventListener(`touchmove`, (e) => {
+      touch_end_cord_x = e.touches[0].clientX
+    })
+    slide.addEventListener(`touchend`, () => {
+      if ((touch_start_cord_x - touch_end_cord_x) > 50) {
+        //! direction = true
+        Slide_calculator(ACTIVE_SLIDE, true)
+        Previous_slide(PREVIOUS_SLIDE)
+        Active_slide(ACTIVE_SLIDE)
+        Next_slide(NEXT_SLIDE)
+        Rearrange_slides(PREVIOUS_SLIDE, ACTIVE_SLIDE, NEXT_SLIDE)
+      } else if ((touch_end_cord_x - touch_start_cord_x) > 50) {
+        //! direction = false
+        Slide_calculator(ACTIVE_SLIDE, false)
+        Previous_slide(PREVIOUS_SLIDE)
+        Active_slide(ACTIVE_SLIDE)
+        Next_slide(NEXT_SLIDE)
+        Rearrange_slides(PREVIOUS_SLIDE, ACTIVE_SLIDE, NEXT_SLIDE)
+      } else null
+    })
+  });
 }

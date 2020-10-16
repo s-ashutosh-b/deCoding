@@ -1,0 +1,168 @@
+div.modal {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba($color: #000000, $alpha: 0.75);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5vh 5vw;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s;
+  div.modal-area {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 52rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow: hidden;
+    span.title{}
+    span.close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: black;
+      z-index: 10;
+      cursor: pointer;
+      transition: all 0.25s;
+      font-size: 1.25rem;
+      &:hover {
+        text-shadow: 0 0 3px;
+        color: red;
+      }
+    }
+    div.article-field {
+      position: relative;
+      height: 3.5rem;
+      margin: 0.25rem;
+      box-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.15);
+      border-radius: 5px;
+      overflow: hidden;
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding: 0 0.5rem;
+        padding-top: 1.5rem;
+        outline: none;
+        border: none;
+        &:hover + label {
+          color: $primary-tone;
+        }
+        &:focus + label,
+        &:valid + label {
+          &::after {
+            left: 0;
+            transform: translateX(0);
+          }
+          span {
+            color: $primary-tone;
+            bottom: 1.75rem;
+          }
+        }
+      }
+      label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.25s;
+        pointer-events: none;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          pointer-events: none;
+          border-bottom: 3px solid $primary-tone;
+          transform: translateX(-100%);
+          transition: all 0.25s;
+        }
+        span {
+          position: absolute;
+          padding: 0 0.5rem;
+          bottom: 0;
+          left: 0;
+          transition: all 0.25s;
+        }
+      }
+    }
+    div.ck-editor {
+      flex: 1;
+      margin: 0.5rem 0;
+      position: relative;
+      scrollbar-width: thin;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      div.ck-editor__top {
+        position: sticky;
+        top: 0;
+        left: 0;
+      }
+      div.ck-editor__main {
+        flex: 1;
+        div.ck-content {
+          height: 100%;
+        }
+      }
+    }
+    div {
+      input[type="button"] {
+        width: fit-content;
+        padding: 0.25rem 0.5rem;
+        margin: 0 0.25rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.25s;
+        outline: transparent;
+        &#draft-article {
+          background: $primary-tone;
+          color: white;
+          border: 2px solid transparent;
+          &:hover {
+            background: white;
+            color: $primary-tone;
+            border-color: $primary-tone;
+          }
+        }
+        &#publish-article {
+          background: limegreen;
+          color: white;
+          border: 2px solid transparent;
+          &:hover {
+            background: white;
+            color: limegreen;
+            border-color: limegreen;
+          }
+        }
+        &#delete-article {
+          background: tomato;
+          color: white;
+          border: 2px solid transparent;
+          &:hover {
+            background: white;
+            color: tomato;
+            border-color: tomato;
+          }
+        }
+      }
+    }
+  }
+}

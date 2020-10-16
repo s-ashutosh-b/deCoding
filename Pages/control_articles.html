@@ -20,7 +20,6 @@
     <aside class="navigation">
       <a href="#" class="newArticle">New Article</a>
       <a href="./control_articles.html" class="control_navigation active">Articles</a>
-      <a href="./control_authors.html" class="control_navigation">Authors</a>
       <a href="./control_categories.html" class="control_navigation">Categories</a>
       <a href="./control_analytics.html" class="control_navigation">Analytics</a>
       <a href="./control_settings.html" class="control_navigation">Blog Settings</a>
@@ -33,8 +32,7 @@
             <tr>
               <th>S.No</th>
               <th>Article's Title</th>
-              <th>Created By</th>
-              <th>Total views</th>
+              <th>Published</th>
               <th></th>
             </tr>
           </thead>
@@ -42,8 +40,7 @@
             <tr id="article_1">
               <td>1</td>
               <td>this is the blog's title, sometimes Lorem, ipsum dolor.</td>
-              <td>Author's Name</td>
-              <td>7.5k</td>
+              <td>Published</td>
               <td>
                 <svg onclick="delete_current_row(this.parentNode.parentNode.id)" width="24" height="27"
                   viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,8 +52,7 @@
             <tr id="article_1">
               <td>1</td>
               <td>this is the blog's title, sometimes Lorem, ipsum dolor.</td>
-              <td>Author's Name</td>
-              <td>7.5k</td>
+              <td>Draft</td>
               <td>
                 <svg onclick="delete_current_row(this.parentNode.parentNode.id)" width="24" height="27"
                   viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +66,40 @@
       </div>
     </div>
   </main>
+  
+  <div class="modal">
+    <div class="modal-area">
+      <span class="title">New Article</span>
+      <span class="close">&#10005;</span>
+      <div class="title article-field">
+        <input type="text" id="title" required>
+        <label for="category">
+          <span>Title</span>
+        </label>
+      </div>
+      <div class="subtitle article-field">
+        <input type="text" id="subtitle" required>
+        <label for="subtitle">
+          <span>Subtitle</span>
+        </label>
+      </div>
+      <div class="category article-field">
+        <input type="text" id="category" required>
+        <label for="category">
+          <span>Category</span>
+        </label>
+      </div>
+      <div id="editor"></div>
+      <div class="buttons">
+        <input type="button" value="Draft" id="draft-article">
+        <input type="button" value="Publish" id="publish-article">
+        <input type="button" value="Delete" id="delete-article">
+      </div>
+    </div>
+  </div>
   <footer></footer>
+  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+  <script src="../Scripts/modal.js"></script>
   <script>
     function delete_current_row(row_id) {
       let doc = document.getElementById(row_id)

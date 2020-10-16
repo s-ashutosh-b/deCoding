@@ -112,19 +112,17 @@ main {
             min-width: 4rem;
           }
           th:nth-child(2) {
-            min-width: 7rem;
-            width: 12rem;
+            min-width: 9rem;
           }
           th:nth-child(3) {
-            min-width: 21rem;
+            min-width: 32rem;
             width: 42rem;
+            max-width: 42rem;
           }
           th:nth-child(4) {
-            min-width: 7rem;
-          }
-          th:nth-child(5) {
             min-width: 3rem;
           }
+          
         }
       }
       tbody {
@@ -154,17 +152,14 @@ main {
             text-align: center;
           }
           td:nth-child(2) {
-            min-width: 7rem;
-            width: 12rem;
+            min-width: 9rem;
           }
           td:nth-child(3) {
-            min-width: 21rem;
+            min-width: 32rem;
             width: 42rem;
+            max-width: 42rem;
           }
           td:nth-child(4) {
-            min-width: 7rem;
-          }
-          td:nth-child(5) {
             min-width: 3rem;
             text-align: center;
             cursor: pointer;
@@ -172,12 +167,13 @@ main {
               border-bottom-color: red;
             }
           }
-        }
+                  }
       }
     }
   }
   }
 }
+@import './modal';
 @media only screen and (max-width: 720px) {
   header {
     span.title {
