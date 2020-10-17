@@ -9,6 +9,8 @@ $secondary-tone: rgb(28, 87, 114);
 body {
   position: relative;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 header {
   height: 3.5rem;
@@ -44,7 +46,7 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
-  padding-top: 3.5rem;
+  margin-top: 3.5rem;
   aside {
     display: flex;
     padding-top: 1rem;
@@ -73,7 +75,7 @@ main {
   }
 }
 
-@import './modal';
+@import "./modal";
 
 @media only screen and (max-width: 720px) {
   header {

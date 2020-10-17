@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>deCoding: Dashboard</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../Styles/CSS/control_saved_posts.css">
+</head>
+
+<body>
+  <header>
+    <span class="title" onclick="window.location.href = './dashboard.html'">Admin's Dashboard</span>
+    <input type="button" value="Logout" onclick="window.location.href = '../index.html'">
+  </header>
+  <main>
+    <aside class="navigation">
+      <a href="#" class="newArticle">New Article</a>
+      <a href="./control_articles.html" class="control_navigation">Articles</a>
+      <a href="./control_saved_posts.html" class="control_navigation active">Saved Posts</a>
+      <a href="./control_analytics.html" class="control_navigation">Analytics</a>
+      <a href="./control_settings.html" class="control_navigation">Blog Settings</a>
+    </aside>
+    <div class="control-area">
+      <span class="heading">List of Posts saved:</span>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Written by</th>
+              <th>[#tag_name]Title</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="cate_1">
+              <td>1</td>
+              <td>Author's Name</td>
+              <td>[#category_name][#category_name4]This is categories description and not just Lorem, ipsum dolor sit
+                amet
+                consectetur adipisicing.</td>
+              <td>
+                <svg onclick="delete_current_row(this.parentNode.parentNode.id)" width="24" height="27"
+                  viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.2521 8.92951C21.5179 8.92951 21.7591 9.04551 21.9497 9.24151C22.1274 9.45084 22.2169 9.71084 22.1909 9.9855C22.1909 10.0762 21.4803 19.0627 21.0744 22.8454C20.8203 25.1667 19.3238 26.576 17.0792 26.6147C15.3532 26.6533 13.6662 26.6667 12.0051 26.6667C10.2415 26.6667 8.51684 26.6533 6.84275 26.6147C4.67331 26.5627 3.17558 25.128 2.93439 22.8454C2.51684 19.0494 1.81919 10.0762 1.80622 9.9855C1.79326 9.71084 1.88144 9.45084 2.06038 9.24151C2.23674 9.04551 2.4909 8.92951 2.75803 8.92951H21.2521ZM14.753 0C15.9317 0 16.9847 0.822659 17.2894 1.99598L17.5072 2.9693C17.6836 3.76263 18.3709 4.32396 19.1619 4.32396H23.0495C23.5682 4.32396 24 4.75462 24 5.30261V5.80928C24 6.34394 23.5682 6.78793 23.0495 6.78793H0.951805C0.431813 6.78793 0 6.34394 0 5.80928V5.30261C0 4.75462 0.431813 4.32396 0.951805 4.32396H4.83942C5.62913 4.32396 6.3164 3.76263 6.49406 2.97064L6.69764 2.06131C7.01405 0.822658 8.05533 0 9.24703 0H14.753Z"
+                    fill="#FF0000" /></svg>
+              </td>
+            </tr>
+            <tr id="cate_2">
+              <td>1</td>
+              <td>Author's Name</td>
+              <td>[#category_name][#category_name4]This is categories description and not just Lorem, ipsum dolor sit
+                amet
+                consectetur adipisicing.</td>
+              <td>
+                <svg onclick="delete_current_row(this.parentNode.parentNode.id)" width="24" height="27"
+                  viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.2521 8.92951C21.5179 8.92951 21.7591 9.04551 21.9497 9.24151C22.1274 9.45084 22.2169 9.71084 22.1909 9.9855C22.1909 10.0762 21.4803 19.0627 21.0744 22.8454C20.8203 25.1667 19.3238 26.576 17.0792 26.6147C15.3532 26.6533 13.6662 26.6667 12.0051 26.6667C10.2415 26.6667 8.51684 26.6533 6.84275 26.6147C4.67331 26.5627 3.17558 25.128 2.93439 22.8454C2.51684 19.0494 1.81919 10.0762 1.80622 9.9855C1.79326 9.71084 1.88144 9.45084 2.06038 9.24151C2.23674 9.04551 2.4909 8.92951 2.75803 8.92951H21.2521ZM14.753 0C15.9317 0 16.9847 0.822659 17.2894 1.99598L17.5072 2.9693C17.6836 3.76263 18.3709 4.32396 19.1619 4.32396H23.0495C23.5682 4.32396 24 4.75462 24 5.30261V5.80928C24 6.34394 23.5682 6.78793 23.0495 6.78793H0.951805C0.431813 6.78793 0 6.34394 0 5.80928V5.30261C0 4.75462 0.431813 4.32396 0.951805 4.32396H4.83942C5.62913 4.32396 6.3164 3.76263 6.49406 2.97064L6.69764 2.06131C7.01405 0.822658 8.05533 0 9.24703 0H14.753Z"
+                    fill="#FF0000" /></svg>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <div class="modal"></div>
+  <footer></footer>
+  
+  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+  <script src="../Scripts/modal.js"></script>
+
+
+  <script>
+    function delete_current_row(row_id) {
+      let doc = document.getElementById(row_id)
+      doc.remove()
+    }
+    (() => {
+      const aside = document.querySelector(`aside`)
+      aside.addEventListener(`wheel`, (e) => {
+        aside.scrollLeft += e.deltaY
+      })
+    })()
+  </script>
+</body>
+
+</html>

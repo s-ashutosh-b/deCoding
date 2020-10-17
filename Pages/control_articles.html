@@ -20,7 +20,7 @@
     <aside class="navigation">
       <a href="#" class="newArticle">New Article</a>
       <a href="./control_articles.html" class="control_navigation active">Articles</a>
-      <a href="./control_categories.html" class="control_navigation">Categories</a>
+      <a href="./control_saved_posts.html" class="control_navigation">Saved Posts</a>
       <a href="./control_analytics.html" class="control_navigation">Analytics</a>
       <a href="./control_settings.html" class="control_navigation">Blog Settings</a>
     </aside>
@@ -66,37 +66,7 @@
       </div>
     </div>
   </main>
-  
-  <div class="modal">
-    <div class="modal-area">
-      <span class="title">New Article</span>
-      <span class="close">&#10005;</span>
-      <div class="title article-field">
-        <input type="text" id="title" required>
-        <label for="category">
-          <span>Title</span>
-        </label>
-      </div>
-      <div class="subtitle article-field">
-        <input type="text" id="subtitle" required>
-        <label for="subtitle">
-          <span>Subtitle</span>
-        </label>
-      </div>
-      <div class="category article-field">
-        <input type="text" id="category" required>
-        <label for="category">
-          <span>Category</span>
-        </label>
-      </div>
-      <div id="editor"></div>
-      <div class="buttons">
-        <input type="button" value="Draft" id="draft-article">
-        <input type="button" value="Publish" id="publish-article">
-        <input type="button" value="Delete" id="delete-article">
-      </div>
-    </div>
-  </div>
+  <div class="modal"></div>
   <footer></footer>
   <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
   <script src="../Scripts/modal.js"></script>
