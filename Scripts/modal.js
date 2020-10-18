@@ -83,8 +83,34 @@ const new_article = () => {
       modal_editor.style.visibility = `visible`
       modal_editor.style.opacity = `1`
       modal_editor.style.pointerEvents = `all`
+
+      document.getElementById(`title`).value = ``
+      document.getElementById(`subtitle`).value = ``
+      document.getElementById(`tags`).value = ``
+      document.querySelector(`div.modal div.modal-area div.ck-editor div.ck-editor__main div.ck-content`).innerHTML = ``
     }, 250);
   })
+}
+
+const close_editor = () => {
+  const modal_editor = document.querySelector(`div.editor`)
+  modal_editor.style.visibility = `hidden`
+  modal_editor.style.opacity = `0`
+  modal_editor.style.pointerEvents = `none`
+}
+
+const close_modal = () => {
+  const modal = document.querySelector(`div.modal`)
+  modal.style.visibility = `hidden`
+  modal.style.opacity = `0`
+  modal.style.pointerEvents = `none`
+}
+
+const close_publish = () => {
+  const modal_publish = document.querySelector(`div.publish`)
+  modal_publish.style.visibility = `hidden`
+  modal_publish.style.opacity = `0`
+  modal_publish.style.pointerEvents = `none`
 }
 
 const editor_close = () => {
@@ -96,50 +122,51 @@ const editor_close = () => {
 
   modal.addEventListener(`click`, (e) => {
     if (e.path[0].classList.contains(`modal`)) {
-      modal_editor.style.visibility = `hidden`
-      modal_editor.style.opacity = `0`
-      modal_editor.style.pointerEvents = `none`
-
+      close_editor()
+      close_publish
       setTimeout(() => {
-        modal.style.visibility = `hidden`
-        modal.style.opacity = `0`
-        modal.style.pointerEvents = `none`
+        close_modal()
       }, 250);
     } else null
-
   })
 
   editor_close_btn.addEventListener(`click`, () => {
-    modal_editor.style.visibility = `hidden`
-    modal_editor.style.opacity = `0`
-    modal_editor.style.pointerEvents = `none`
-
-    modal_publish.style.visibility = `hidden`
-    modal_publish.style.opacity = `0`
-    modal_publish.style.pointerEvents = `none`
-
+    close_editor()
+    close_publish()
     setTimeout(() => {
-      modal.style.visibility = `hidden`
-      modal.style.opacity = `0`
-      modal.style.pointerEvents = `none`
+      close_modal()
     }, 250);
   })
 
   publish_close_btn.addEventListener(`click`, () => {
-    modal_editor.style.visibility = `hidden`
-    modal_editor.style.opacity = `0`
-    modal_editor.style.pointerEvents = `none`
-
-    modal_publish.style.visibility = `hidden`
-    modal_publish.style.opacity = `0`
-    modal_publish.style.pointerEvents = `none`
-
+    close_editor()
+    close_publish()
     setTimeout(() => {
-      modal.style.visibility = `hidden`
-      modal.style.opacity = `0`
-      modal.style.pointerEvents = `none`
+      close_modal()
     }, 250);
   })
+}
+
+const publish_article = () => {
+  document.querySelector(`footer`).innerHTML = `<div class="notification">Article Published!</div>`
+  setTimeout(() => {
+    document.querySelector(`footer`).innerHTML = ``
+
+  }, 4000);
+}
+const draft_article = () => {
+  document.querySelector(`footer`).innerHTML = `<div class="notification">Saved as Draft...</div>`
+  setTimeout(() => {
+    document.querySelector(`footer`).innerHTML = ``
+
+  }, 4000);
+}
+const delete_article = () => {
+  document.querySelector(`footer`).innerHTML = `<div class="notification">DELETED</div>`
+  setTimeout(() => {
+    document.querySelector(`footer`).innerHTML = ``
+
+  }, 4000);
 }
 
 const article_options = () => {
@@ -158,18 +185,11 @@ const article_options = () => {
 
   draft_editor.addEventListener(`click`, () => {
     //this should save the article as draft
-    modal_editor.style.visibility = `hidden`
-    modal_editor.style.opacity = `0`
-    modal_editor.style.pointerEvents = `none`
-
-    modal_publish.style.visibility = `hidden`
-    modal_publish.style.opacity = `0`
-    modal_publish.style.pointerEvents = `none`
-
+    close_editor()
+    close_publish()
     setTimeout(() => {
-      modal.style.visibility = `hidden`
-      modal.style.opacity = `0`
-      modal.style.pointerEvents = `none`
+      close_modal()
+      draft_article()
     }, 250);
   })
 
@@ -181,17 +201,15 @@ const article_options = () => {
 
     const title_value = title.value
     const subtitle_value = subtitle.value
-    const tags_value = tags.value
+    // todo: Tags values should be used later
+    //! const tags_value = tags.value
     const content_value = content.innerHTML
 
     modal_publish.querySelector(`div.article h1`).innerHTML = title_value
     modal_publish.querySelector(`div.article h3`).innerHTML = subtitle_value
     modal_publish.querySelector(`div.article article`).innerHTML = `<div>${content_value}</div>`
 
-    modal_editor.style.visibility = `hidden`
-    modal_editor.style.opacity = `0`
-    modal_editor.style.pointerEvents = `none`
-
+    close_editor()
     setTimeout(() => {
       modal_publish.style.visibility = `visible`
       modal_publish.style.opacity = `1`
@@ -201,69 +219,41 @@ const article_options = () => {
 
   del_art_editor.addEventListener(`click`, () => {
     //this should delete the article
-    modal_editor.style.visibility = `hidden`
-    modal_editor.style.opacity = `0`
-    modal_editor.style.pointerEvents = `none`
-
-    modal_publish.style.visibility = `hidden`
-    modal_publish.style.opacity = `0`
-    modal_publish.style.pointerEvents = `none`
-
+    delete_article()
+    close_editor()
+    close_publish()
     setTimeout(() => {
-      modal.style.visibility = `hidden`
-      modal.style.opacity = `0`
-      modal.style.pointerEvents = `none`
+      close_modal()
     }, 250);
   })
 
   draft_publish.addEventListener(`click`, () => {
     //this should save the article as draft
-    modal_editor.style.visibility = `hidden`
-    modal_editor.style.opacity = `0`
-    modal_editor.style.pointerEvents = `none`
-
-    modal_publish.style.visibility = `hidden`
-    modal_publish.style.opacity = `0`
-    modal_publish.style.pointerEvents = `none`
-
+    draft_article()
+    close_editor()
+    close_publish()
     setTimeout(() => {
-      modal.style.visibility = `hidden`
-      modal.style.opacity = `0`
-      modal.style.pointerEvents = `none`
+      close_modal()
     }, 250);
   })
 
   publish_publish.addEventListener(`click`, () => {
     //this should save the article as draft
-    modal_editor.style.visibility = `hidden`
-    modal_editor.style.opacity = `0`
-    modal_editor.style.pointerEvents = `none`
-
-    modal_publish.style.visibility = `hidden`
-    modal_publish.style.opacity = `0`
-    modal_publish.style.pointerEvents = `none`
-
+    publish_article()
+    close_editor()
+    close_publish()
     setTimeout(() => {
-      modal.style.visibility = `hidden`
-      modal.style.opacity = `0`
-      modal.style.pointerEvents = `none`
+      close_modal()
     }, 250);
   })
 
   del_art_publish.addEventListener(`click`, () => {
     //this should save the article as draft
-    modal_editor.style.visibility = `hidden`
-    modal_editor.style.opacity = `0`
-    modal_editor.style.pointerEvents = `none`
-
-    modal_publish.style.visibility = `hidden`
-    modal_publish.style.opacity = `0`
-    modal_publish.style.pointerEvents = `none`
-
+    delete_article()
+    close_editor()
+    close_publish()
     setTimeout(() => {
-      modal.style.visibility = `hidden`
-      modal.style.opacity = `0`
-      modal.style.pointerEvents = `none`
+      close_modal()
     }, 250);
   })
 }
