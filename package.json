@@ -1,0 +1,17 @@
+{
+  "name": "decoding",
+  "version": "1.0.0",
+  "description": "A blogging web app related to coding stuff.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Ashutosh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.6"
+  }
+}
