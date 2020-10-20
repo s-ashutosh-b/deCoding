@@ -32,6 +32,11 @@
       </form>
       <form action="" class="signup" style="display: none;">
         <div class="form-field">
+          <input type="text" autocomplete="off" required id="signup_username">
+          <label for="username"><span>Username</span></label>
+        </div>
+        <span class="username_existed" style="display: none;">Username already exist :(</span>
+        <div class="form-field">
           <input type="text" autocomplete="off" required id="fullName">
           <label for="fullName"><span>Full Name</span></label>
         </div>
@@ -43,11 +48,7 @@
           <input type="date" autocomplete="off" required id="DOB">
           <label for="DOB"><span>Date of Birth</span></label>
         </div>
-        <div class="form-field">
-          <input type="text" autocomplete="off" required id="signup_username">
-          <label for="username"><span>Username</span></label>
-        </div>
-        <span class="username_existed" style="display: none;">Username already exist :(</span>
+
         <div class="form-field">
           <input type="password" autocomplete="off" required id="signup_password">
           <label for="password"><span>Password</span></label>
