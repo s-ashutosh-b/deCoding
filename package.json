@@ -4,7 +4,7 @@
   "description": "A blogging web app related to coding stuff.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app"
   },
   "author": "Ashutosh Kumar",
   "license": "ISC",

@@ -1,0 +1,20 @@
+@import '_Defaults.scss';
+
+body{
+  max-width: 90%;
+  margin: 0 5%;
+}
+span{
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+span.err{
+  color: red;
+  font-size: 5rem;
+}
+a{
+  width: 100%;
+  text-align: center;
+  display: block;
+}
