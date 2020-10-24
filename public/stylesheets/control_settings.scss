@@ -1,0 +1,112 @@
+$primary-tone: rgb(48, 115, 146);
+$secondary-tone: rgb(28, 87, 114);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+  height: 100vh;
+}
+header {
+  height: 3.5rem;
+  background: $primary-tone;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  margin-bottom: -3.5rem;
+  span.title {
+    text-decoration: underline;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  input[type="button"] {
+    padding: 0.5rem 1rem;
+    background: $primary-tone;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    transition: all 0.25s;
+    &:hover {
+      background: white;
+      border: 2px solid transparent;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding-top: 3.5rem;
+  aside {
+    display: flex;
+    padding-top: 1rem;
+    flex-direction: column;
+    background: $secondary-tone;
+    height: 100%;
+    width: fit-content;
+    a {
+      padding: 0.25rem 1rem;
+      margin: 0.25rem 0 0.25rem 0.25rem;
+      text-decoration: none;
+      color: white;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: all 0.25s;
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+    a.active {
+      background: white;
+      color: $secondary-tone;
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+  div.control-area {
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    span.heading {
+      font-size: 1.5rem;
+    }
+  }
+}
+@media only screen and (max-width: 720px) {
+  header {
+    span.title {
+      font-size: 1.25rem;
+    }
+    input[type="button"] {
+      padding: 0.25rem 0.5rem;
+    }
+  }
+  main {
+    flex-direction: column;
+    overflow: hidden;
+    aside {
+      flex-direction: row;
+      height: fit-content;
+      width: 100%;
+      position: relative;
+      padding: 0.25rem;
+      overflow: scroll;
+      padding-bottom: 0;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+//      div.control-area {
+//      }
+    }
+  }
+}

@@ -1,12 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/CSS/index.css">
-  <title>deCoding | <%= title %> </title>
+  <title>deCoding</title>
+
 </head>
+
 <body>
-  FINALLY!!! LIVE FROM EXPRESS!!!
+  <header>
+    <span class="title"><u>deCoding</u></span>
+    <svg onclick="window.location.href = '/login'" class="account-button" width="34" height="40"
+      viewBox="0 0 34 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16.8123 26.3479C25.9301 26.3479 33.6246 27.7579 33.6246 33.1979C33.6246 38.64 25.8797 40 16.8123 40C7.69662 40 0 38.59 0 33.1499C0 27.7079 7.74498 26.3479 16.8123 26.3479ZM16.8123 0C22.989 0 27.9378 4.70805 27.9378 10.5821C27.9378 16.4562 22.989 21.1662 16.8123 21.1662C10.6378 21.1662 5.6868 16.4562 5.6868 10.5821C5.6868 4.70805 10.6378 0 16.8123 0Z"
+        fill="#200E32" />
+    </svg>
+    <svg class="menu-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M11.84 22.9394C14.66 22.9394 16.92 25.2214 16.92 28.0614V34.8794C16.92 37.6994 14.66 39.9994 11.84 39.9994H5.08C2.28 39.9994 0 37.6994 0 34.8794V28.0614C0 25.2214 2.28 22.9394 5.08 22.9394H11.84ZM34.9202 22.9394C37.7202 22.9394 40.0002 25.2214 40.0002 28.0614V34.8794C40.0002 37.6994 37.7202 39.9994 34.9202 39.9994H28.1602C25.3402 39.9994 23.0802 37.6994 23.0802 34.8794V28.0614C23.0802 25.2214 25.3402 22.9394 28.1602 22.9394H34.9202ZM11.84 0C14.66 0 16.92 2.3 16.92 5.122V11.94C16.92 14.78 14.66 17.06 11.84 17.06H5.08C2.28 17.06 0 14.78 0 11.94V5.122C0 2.3 2.28 0 5.08 0H11.84ZM34.9202 0C37.7202 0 40.0002 2.3 40.0002 5.122V11.94C40.0002 14.78 37.7202 17.06 34.9202 17.06H28.1602C25.3402 17.06 23.0802 14.78 23.0802 11.94V5.122C23.0802 2.3 25.3402 0 28.1602 0H34.9202Z"
+        fill="#200E32" />
+    </svg>
+  </header>
+
+  <nav>
+    <a href="#" class="nav-link-2">Catogary</a>
+    <a href="#" class="nav-link-3">Catogary</a>
+    <a href="#" class="nav-link-4">Catogary</a>
+    <a href="#" class="nav-link-5">Catogary</a>
+    <a href="#" class="nav-link-1">Catogary</a>
+    <a href="#" class="nav-link-6">Catogary</a>
+    <a href="#" class="nav-link-7">Catogary</a>
+  </nav>
+
+  <div class="carousal">
+    <div class="carousal-slide">
+      <picture>
+        <source media="(min-width:2160px)" srcset="/Images/4k/pexels-matt-hardy-3560168.jpg">
+        <source media="(min-width:1080px)" srcset="/Images/1080p/pexels-matt-hardy-3560168.jpg">
+        <source media="(min-width:720px)" srcset="/Images/720p/pexels-matt-hardy-3560168.jpg">
+        <source media="(min-width:480px)" srcset="/Images/480p/pexels-matt-hardy-3560168.jpg">
+        <img src="/Images/360p/pexels-matt-hardy-3560168.jpg" alt="matt-hardy-3560168">
+      </picture>
+      <span>
+        <h1>Image Carousal Title</h1>
+        <h3>Image carousal subtitle. Probably Lorem Ipsum Dolar Sit Amet!</h3>
+      </span>
+    </div>
+    <div class="carousal-slide">
+      <picture>
+        <source media="(min-width:2160px)" srcset="/Images/4k/pexels-riccardo-bertolo-4245826.jpg">
+        <source media="(min-width:1080px)" srcset="/Images/1080p/pexels-riccardo-bertolo-4245826.jpg">
+        <source media="(min-width:720px)" srcset="/Images/720p/pexels-riccardo-bertolo-4245826.jpg">
+        <source media="(min-width:480px)" srcset="/Images/480p/pexels-riccardo-bertolo-4245826.jpg">
+        <img src="/Images/360p/pexels-riccardo-bertolo-4245826.jpg" alt="riccardo-bertolo-4245826.jpg">
+      </picture>
+      <span>
+        <h1>Image Carousal Title</h1>
+        <h3>Image carousal subtitle. Probably Lorem Ipsum Dolar Sit Amet!</h3>
+      </span>
+    </div>
+    <div class="carousal-slide">
+      <picture>
+        <source media="(min-width:2160px)" srcset="/Images/4k/pexels-roberto-nickson-2559941.jpg">
+        <source media="(min-width:1080px)" srcset="/Images/1080p/pexels-roberto-nickson-2559941.jpg">
+        <source media="(min-width:720px)" srcset="/Images/720p/pexels-roberto-nickson-2559941.jpg">
+        <source media="(min-width:480px)" srcset="/Images/480p/pexels-roberto-nickson-2559941.jpg">
+        <img src="/Images/360p/pexels-roberto-nickson-2559941.jpg" alt="roberto-nickson-2559941">
+      </picture>
+      <span>
+        <h1>Image Carousal Title</h1>
+        <h3>Image carousal subtitle. Probably Lorem Ipsum Dolar Sit Amet!</h3>
+      </span>
+    </div>
+    <div class="carousal-slide">
+      <picture>
+        <source media="(min-width:2160px)" srcset="/Images/4k/pexels-simon-matzinger-1323550.jpg">
+        <source media="(min-width:1080px)" srcset="/Images/1080p/pexels-simon-matzinger-1323550.jpg">
+        <source media="(min-width:720px)" srcset="/Images/720p/pexels-simon-matzinger-1323550.jpg">
+        <source media="(min-width:480px)" srcset="/Images/480p/pexels-simon-matzinger-1323550.jpg">
+        <img src="/Images/360p/pexels-simon-matzinger-1323550.jpg" alt="simon-matzinger-1323550">
+      </picture>
+      <span>
+        <h1>Image Carousal Title</h1>
+        <h3>Image carousal subtitle. Probably Lorem Ipsum Dolar Sit Amet!</h3>
+      </span>
+    </div>
+    <div class="slider"></div>
+    <div class="next-button carousal-nav-buttons">&gt;</div>
+    <div class="prev-button carousal-nav-buttons">&lt;</div>
+  </div>
+
+  <main>
+    <aside class="timeline">
+      <span class="timeline-title"><span class="text">Timeline</span><span class="mark">&#x25BC;</span></span>
+      <a href="#">September 2020</a>
+      <a href="#">August 2020</a>
+      <a href="#">July 2020</a>
+      <a href="#">June 2020</a>
+      <a href="#">May 2020</a>
+      <a href="#">Show more...</a>
+    </aside>
+    <aside class="latest-blogs">
+      <span class="blog-title"><span class="text">Previous Blogs</span><span class="mark">&#x25BC;</span></span>
+      <a href="/blog/article">Previous blogs title should come here</a>
+      <a href="/blog/article">Previous blogs title should come here</a>
+      <a href="/blog/article">Previous blogs title should come here</a>
+      <a href="/blog/article">Previous blogs title should come here</a>
+      <a href="/blog/article">Previous blogs title should come here</a>
+    </aside>
+    <div class="blogs-area">
+      <section class="blog">
+        <h1 class="article-title">Blog Title will go here!</h1>
+        <h3 class="article-subtitle">This Might Be Blog’s Subtitle, It should be some relevent text and not just lorem
+          ipsum 75 thing. Legit text with some good labels and tags should do the work.</h6>
+          <div class="article-author">
+            <img src="/Images/dp.png" alt="author's name">
+            <span class="authors-data" onclick="window.location.href = '/blog/profile'">
+              <span class="authors-name">Author’s Name</span>
+              <span class="authors-subtitle">Author’s Subtitle, Designation or Qualifications</span>
+            </span>
+          </div>
+          <article class="article-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          </article>
+          <a class="read-full-article" href="/blog/article">Read full article...</a>
+      </section>
+      <a class="load-more-articles-button" href="#">load more</a>
+    </div>
+  </main>
+
+  <footer>
+    <section class="site-map">
+      <a class="site-map-links" href="#">links to different sections of site...</a>
+      <a class="site-map-links" href="#">links to different sections of site...</a>
+      <a class="site-map-links" href="#">links to different sections of site...</a>
+      <a class="site-map-links" href="#">links to different sections of site...</a>
+    </section>
+    <section class="blogs">
+      <a class="blog-links" href="#">links to different blogs articles on the site...</a>
+      <a class="blog-links" href="#">links to different blogs articles on the site...</a>
+      <a class="blog-links" href="#">links to different blogs articles on the site...</a>
+      <a class="blog-links" href="#">links to different blogs articles on the site...</a>
+    </section>
+    <section class="social-media">
+      <a class="social-media-links" href="#">links to different social media pages...</a>
+      <a class="social-media-links" href="#">links to different social media pages...</a>
+      <a class="social-media-links" href="#">links to different social media pages...</a>
+      <a class="social-media-links" href="#">links to different social media pages...</a>
+    </section>
+  </footer>
 </body>
+<script src="javascripts/index.js"></script>
+
 </html>

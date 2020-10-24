@@ -1,9 +1,10 @@
 // * Start of app
 
+require(`dotenv`).config()
 const express = require(`express`)
 const app = express()
-const PORT = 7921
 const router = require(`./routes/routes`)
+const PORT = process.env.PORT
 
 // Set up view Engine
 app.set(`view engine`, `ejs`)

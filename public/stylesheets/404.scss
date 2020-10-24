@@ -1,5 +1,9 @@
-@import '_Defaults.scss';
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} 
 body{
   max-width: 90%;
   margin: 0 5%;
@@ -9,7 +13,7 @@ span{
   text-align: center;
   display: block;
 }
-span.err{
+span.err{  
   color: red;
   font-size: 5rem;
 }
